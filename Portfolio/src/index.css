@@ -5,7 +5,7 @@
   align-items: center; /* Центрируем элементы по вертикали */
   gap: 15px; /* Меньше отступов между элементами */
   padding: 10px 20px; /* Меньше отступов по бокам */
-  background: #cd8b8b;
+  background: #f5f2f2;
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для добавления объема */
@@ -13,14 +13,14 @@
 
 /* Стиль для логотипа */
 .logo img {
-  width: 50px; /* Размер логотипа */
+  width: 100px; /* Размер логотипа */
   height: auto;
   margin-right: 20px; /* Отступ справа от логотипа, если нужно */
 }
 
 /* Для ссылок внутри .navbar */
 .navbar a {
-  color: #fff;
+  color: #010000;
   font-weight: bold;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
@@ -32,7 +32,7 @@
 
 /* Эффект при наведении на ссылки */
 .navbar a:hover {
-  background-color: #a76d6d; /* Цвет фона при наведении */
+  background-color: #ffffff; /* Цвет фона при наведении */
   transform: translateY(-5px); /* Легкое поднятие текста */
   box-shadow: none; /* Убираем тень на ссылках при наведении */
 }
