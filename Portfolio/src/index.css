@@ -1,44 +1,44 @@
-/* Стиль для .navbar */
 .navbar {
   display: flex;
-  justify-content: flex-start; /* Логотип слева, остальные элементы по центру */
-  align-items: center; /* Центрируем элементы по вертикали */
-  gap: 15px; /* Меньше отступов между элементами */
-  padding: 10px 20px; /* Меньше отступов по бокам */
-  background: #f5f2f2;
-  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #3a3a3a, #1c1c1c);
+  border-radius: 30px;
+  font-family: 'Cascadia Mono', monospace;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для добавления объема */
+  transition: background 0.3s ease; /* Плавный переход для navbar */
 }
 
-/* Стиль для логотипа */
-.logo img {
-  width: 100px; /* Размер логотипа */
-  height: auto;
-  margin-right: 20px; /* Отступ справа от логотипа, если нужно */
-}
-
-/* Для ссылок внутри .navbar */
 .navbar a {
-  color: #010000;
+  color: #e0b3c7;
   font-weight: bold;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px; /* Увеличиваем размер шрифта */
-  padding: 5px 10px; /* Добавляем небольшие отступы внутри */
-  border-radius: 5px; /* Скругляем углы */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Плавные анимации */
+  font-family: 'Cascadia Mono', monospace;
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
-/* Эффект при наведении на ссылки */
 .navbar a:hover {
-  background-color: #ffffff; /* Цвет фона при наведении */
-  transform: translateY(-5px); /* Легкое поднятие текста */
-  box-shadow: none; /* Убираем тень на ссылках при наведении */
+  background-color: #f4c2d5;
+  color: #fff;
+  transform: translateY(-5px);
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
 }
 
-/* Убираем подсветку при наведении на логотип */
+.navbar .logo img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+  transition: transform 0.3s ease; /* Плавное изменение логотипа */
+}
+
 .navbar .logo:hover {
-  background-color: transparent; /* Убираем подсветку при наведении */
-  transform: none; /* Убираем эффекты трансформации */
+  transform: scale(1.1);
 }

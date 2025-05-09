@@ -1,0 +1,81 @@
+.footer {
+    background: linear-gradient(135deg, #3a3a3a, #1c1c1c);
+    color: #fff;
+    padding: 20px 15px;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+  }
+  
+  .footer-title {
+    font-size: 22px;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    cursor: default;
+    color: #e0b3c7; /* бледно-розовый цвет */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  
+  .footer-title:hover {
+    transform: scale(1.08);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    color: #f4c2d5; /* ещё более светлый розовый для эффекта наведения */
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+  }
+  
+  .footer-links img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-links img:hover {
+    transform: scale(1.15);
+  }
+  
+  .footer-links a {
+    color: #e0b3c7; /* бледно-розовый цвет */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+  }
+  
+  .footer-links a:hover {
+    color: #f4c2d5; /* более светлый розовый при наведении */
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .label {
+    font-size: 13px;
+    color: #bbb;
+    font-style: italic;
+  }
+  
+  .footer-bottom {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #e0b3c7; /* бледно-розовый цвет */
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+  }
+  
