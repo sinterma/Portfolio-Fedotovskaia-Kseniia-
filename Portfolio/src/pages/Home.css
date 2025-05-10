@@ -1,13 +1,15 @@
 .home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 20px;
-  text-align: center;
-  font-family: 'Cascadia Mono', monospace;
-  color: #e0b3c7;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 50px; /* добавил отступ сверху — 120px */
+    text-align: center;
+    font-family: 'Cascadia Mono', monospace;
+    color: #e0b3c7;
+    min-height: calc(100vh - 120px); /* чтобы контейнер занимал высоту экрана минус navbar */
+    box-sizing: border-box;
+  }
 
 .home-container h1 {
   font-size: 48px;

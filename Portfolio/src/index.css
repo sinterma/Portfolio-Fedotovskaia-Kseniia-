@@ -1,44 +1,79 @@
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 15px 20px;
-  background: linear-gradient(135deg, #3a3a3a, #1c1c1c);
-  border-radius: 30px;
+  gap: 30px;
+  padding: 18px 36px;
+  background: #fef7fa;
+  border-radius: 24px;
   font-family: 'Cascadia Mono', monospace;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  transition: background 0.3s ease; /* Плавный переход для navbar */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  border-top: 4px solid #181717;
+  border-bottom: 4px solid #181717;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  max-width: 600px;
 }
 
 .navbar a {
-  color: #e0b3c7;
+  color: #322e36;
   font-weight: bold;
   text-decoration: none;
-  font-family: 'Cascadia Mono', monospace;
-  font-size: 24px;
-  padding: 10px 15px;
-  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px 18px;
+  border-radius: 12px;
   transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+  outline: none;
 }
 
 .navbar a:hover {
   background-color: #f4c2d5;
   color: #fff;
-  transform: translateY(-5px);
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
 }
 
 .navbar .logo img {
   width: 100px;
   height: auto;
-  margin-right: 20px;
-  transition: transform 0.3s ease; /* Плавное изменение логотипа */
+  transition: none;
+  pointer-events: none;
+  margin-right: 15px;
 }
 
-.navbar .logo:hover {
-  transform: scale(1.1);
+.navbar .logo,
+.navbar .logo:hover,
+.navbar .logo:focus,
+.navbar .logo:active {
+  background: none;
+  box-shadow: none;
+  transform: none;
+  text-shadow: none;
+  outline: none;
+}
+
+.navbar a:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #fefdff;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23c980c0' fill-opacity='0.13' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 100px 100px;
 }
