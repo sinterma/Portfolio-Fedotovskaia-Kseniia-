@@ -6,7 +6,7 @@
     padding: 120px 20px 50px; /* добавил отступ сверху — 120px */
     text-align: center;
     font-family: 'Cascadia Mono', monospace;
-    color: #e0b3c7;
+    color: #db94b4;
     min-height: calc(100vh - 120px); /* чтобы контейнер занимал высоту экрана минус navbar */
     box-sizing: border-box;
   }
@@ -40,8 +40,27 @@
 }
 
 .home-container button:hover {
-  background-color: #e0b3c7;
+  background-color: #db94b4;
   color: #fff;
-  transform: translateY(-4px);
+  transform: translateY(-2px);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+.tech-circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+  border-radius: 50%;
+  animation: rotate 20s linear infinite;
+}
+
+.tech-circle span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0 -130px;
+  font-size: 18px;
+  color: #db94b4;
+  animation: spin 20s linear infinite;
 }
