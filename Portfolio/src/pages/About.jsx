@@ -32,6 +32,7 @@ function About() {
         </div>
 
         <div className="floating-tech">
+          <div className="floating-tech-center-text">Tech stack</div>
           {[
             'React', 'JavaScript', 'TypeScript', 'Node.js', 'MongoDB',
             'Prisma', 'Express', 'CSS', 'HTML5'
