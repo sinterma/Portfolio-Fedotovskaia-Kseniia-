@@ -45,33 +45,53 @@ body, html {
 .about-content h1 {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
-  color: #c97c9e;
-  text-shadow: 0 1px 3px rgba(29, 28, 28, 0.4);
+  color: #ca81a2; /* цвет текста по умолчанию */
   letter-spacing: 2px;
-  margin: 0px;
-  padding: 0px;
+  margin-top: 60px;  /* отступ сверху, чтобы опустить */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .about-content p {
   font-family: 'Cascadia Mono', monospace;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.3;
   color: #322e36;
-  text-shadow: 0 1px 3px rgba(29, 28, 28, 0.4);
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   max-width: 700px;
-  background-color: rgba(233, 180, 227, 0.1);
+  background-color: transparent; /* убран фон */
   padding: 5px;
-  border-radius: 20px;
-  backdrop-filter: blur(2px);
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 20px; /* если хочешь, можно убрать */
+  backdrop-filter: none; /* убрать размытие */
+  box-shadow: none; /* убрать тени */
   text-indent: 20px;
   text-align: left;
   margin-top: 15px;
+  text-shadow: none; /* убрать тень */
 }
 
 .about-content p br {
   margin-bottom: 20px;
+}
+.about-text-box {
+  max-width: 800px;
+  margin-top: 15px;
+  padding: 3px 5px;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* прозрачная рамка */
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* легкая прозрачность фона */
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.05);
+  color: #322e36;
+  font-family: 'Cascadia Mono', monospace;
+  font-size: 16px;
+  line-height: 1.4;
+  text-indent: 20px;
+  text-align: left;
+  user-select: text;
+  z-index: 3;
+  margin-left: 50px; 
 }
 
 /* Обертка для кругов */
@@ -107,7 +127,21 @@ body, html {
   border-radius: 20px;
   font-size: 14px;
 }
+.outer-tech span:hover{
+  background-color: #cb95cf; /* или другой цвет свечения */
+  box-shadow: 0 0 10px 3px #cb95cf;
+  color: white; /* чтобы текст лучше читался */
+  cursor: pointer; /* курсор меняется на руку */
+  transition: all 0.3s ease; /* плавное появление эффекта */
+}
 
+.floating-tech span:hover  {
+ background-color: #5cacd1; /* или другой цвет свечения */
+  box-shadow: 0 0 10px 3px #6ec2e9;
+  color: white; /* чтобы текст лучше читался */
+  cursor: pointer; /* курсор меняется на руку */
+  transition: all 0.3s ease; /* плавное появление эффекта */
+}
 /* Стили для внутреннего круга */
 .floating-tech {
   position: absolute;
@@ -132,7 +166,7 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(calc(-50% + 30px), calc(-50% + 30px));
-  color: white;
+  color:  #ffffff;
   font-family: 'Playfair Display', serif;
   font-size: 24px;
   font-weight: 600;
