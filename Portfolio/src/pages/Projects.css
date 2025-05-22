@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 200px 20px 50px;
+  padding: 200px 20px 150px;
   text-align: center;
   font-family: 'Cascadia Mono', monospace;
   color: #101010;
@@ -109,4 +109,56 @@
   50% {
     transform: translateY(-5px) rotate(2deg);
   }
+}
+.projects-list {
+  width: 100%;
+  max-width: 900px;
+  max-height: calc(100vh - 350px); /* высота экрана минус верхний padding и футер */
+  overflow-y: auto;
+  padding-right: 10px; /* чтобы не слипался с полосой прокрутки */
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+.project-item {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-image {
+  width: 150px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.project-info {
+  flex-grow: 1;
+  color: #a16480;
+  font-family: 'Cascadia Mono', monospace;
+  text-align: left;
+}
+
+.project-info h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.project-info p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
 }
