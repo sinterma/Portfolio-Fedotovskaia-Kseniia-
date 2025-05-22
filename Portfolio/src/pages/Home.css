@@ -6,7 +6,7 @@
     padding: 120px 20px 50px; /* добавил отступ сверху — 120px */
     text-align: center;
     font-family: 'Cascadia Mono', monospace;
-    color: #db94b4;
+    color:  #a16480;
     min-height: calc(100vh - 120px); /* чтобы контейнер занимал высоту экрана минус navbar */
     box-sizing: border-box;
   }
@@ -26,7 +26,7 @@
 }
 
 .home-container button {
-  background-color: #f4c2d5;
+  background-color:  #a16480;
   color: #322e36;
   border: none;
   padding: 12px 25px;

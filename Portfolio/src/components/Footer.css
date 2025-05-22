@@ -49,7 +49,7 @@
 }
 
 .footer-links a:hover {
-    color: #f4c2d5;
+    color:  #a16480;
     text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
@@ -73,7 +73,7 @@
 
 .footer-bottom {
     font-size: 12px;
-    color: #db94b4;
+    color:  #a16480;
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
     margin-top: 0;
     margin-left: 10px;

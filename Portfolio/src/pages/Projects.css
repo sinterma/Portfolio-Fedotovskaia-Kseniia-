@@ -1,0 +1,112 @@
+.projects-container {
+  position: relative; /* Чтобы абсолютное позиционирование вложенных элементов работало относительно этого контейнера */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 200px 20px 50px;
+  text-align: center;
+  font-family: 'Cascadia Mono', monospace;
+  color: #101010;
+  min-height: calc(100vh - 120px); /* Чтобы контейнер занимал высоту экрана минус navbar */
+  box-sizing: border-box;
+}
+
+.projects-container > h1,
+.projects-container > p {
+  position: relative;
+  z-index: 10; /* Текст будет поверх картинок */
+}
+
+.projects-container h1 {
+  font-size: 56px;
+  margin-bottom: 30px;
+  color: #a16480;
+  text-shadow: 1px 2px 20px rgba(2, 2, 0, 0.3);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.projects-container p {
+  font-size: 18px;
+  max-width: 850px;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  color:  #a16480;
+  padding: 20px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Cascadia Mono', monospace;
+  text-align: left;
+  text-indent: 0;
+  transition: all 0.3s ease;
+}
+
+/* Немного анимации при наведении */
+.projects-container p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.decor-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Чтобы не мешали кликам */
+  z-index: 1; /* Ниже, чем текст */
+  overflow: visible; /* Чтобы картинки могли выходить за контейнер */
+  user-select: none;
+}
+
+/* Общие стили для всех декоративных картинок */
+.decor-images {
+  position: absolute; /* фиксируем абсолют */
+  top: 0;
+  left: 0;
+  width: 100%; /* чтобы занимать весь контейнер */
+  height: 100%;
+  pointer-events: none;
+  z-index: 1; /* ниже текста */
+  overflow: visible;
+  user-select: none;
+}
+
+/* Индивидуальные позиции и повороты */
+.decor-img-1 {
+  top: 18%;        /* чуть ниже */
+  left: 52%;       /* сдвинута вправо */
+  transform: rotate(12deg);  /* чуть больше поворот */
+}
+
+.decor-img-2 {
+  top: 8%;         /* чуть выше */
+  right: 18%;      /* чуть дальше от правого края */
+  transform: rotate(-20deg); /* больше поворот */
+}
+
+.decor-img-3 {
+  bottom: 38%;     /* чуть выше */
+  left: 32%;       /* сдвинута вправо */
+  transform: rotate(8deg);   /* чуть меньше поворот */
+}
+
+.decor-img-4 {
+  bottom: 0;
+  right: 0;
+  transform: rotate(-7deg);
+}
+
+/* Анимация лёгкого "плавания" вверх-вниз с поворотом */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+}

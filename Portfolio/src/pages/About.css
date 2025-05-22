@@ -45,7 +45,7 @@ body, html {
 .about-content h1 {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
-  color: #ca81a2; /* цвет текста по умолчанию */
+  color:  #a16480; /* цвет текста по умолчанию */
   letter-spacing: 2px;
   margin-top: 60px;  /* отступ сверху, чтобы опустить */
   margin-bottom: 20px;
