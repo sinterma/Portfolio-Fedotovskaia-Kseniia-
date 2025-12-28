@@ -1,5 +1,7 @@
 import React from "react";
 import "./Footer.css";
+import githubLogo from "../images/GitHub logo.png";
+import linkedinLogo from "../images/linkedin.png";
 
 function Footer() {
   return (
@@ -13,7 +15,7 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <img
-              src="./src/images/GitHub logo.png"
+              src={githubLogo}
               alt="GitHub logo"
             />
           </a>
@@ -23,7 +25,7 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <img
-              src="./src/images/linkedin.png"
+              src={linkedinLogo}
               alt="LinkedIn"
             />
           </a>
