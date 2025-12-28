@@ -1,55 +1,44 @@
 .projects-container {
-  position: relative; /* Чтобы абсолютное позиционирование вложенных элементов работало относительно этого контейнера */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 200px 20px 150px;
+  padding: 150px 20px 300px;
   text-align: center;
   font-family: 'Cascadia Mono', monospace;
-  color: #101010;
-  min-height: calc(100vh - 120px); /* Чтобы контейнер занимал высоту экрана минус navbar */
+  color: var(--text-primary);
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
 .projects-container > h1,
 .projects-container > p {
   position: relative;
-  z-index: 10; /* Текст будет поверх картинок */
+  z-index: 10;
 }
 
 .projects-container h1 {
   font-size: 56px;
   margin-bottom: 30px;
-  color: #a16480;
+  color: var(--text-accent);
   text-shadow: 1px 2px 20px rgba(2, 2, 0, 0.3);
   letter-spacing: 1.5px;
   font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  padding: 15px 40px;
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  background-color: var(--bg-secondary);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px var(--shadow-color);
 }
 
-.projects-container p {
-  font-size: 18px;
-  max-width: 850px;
-  margin-bottom: 20px;
-  line-height: 1.7;
-  color:  #a16480;
-  padding: 20px 25px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  font-family: 'Cascadia Mono', monospace;
-  text-align: left;
-  text-indent: 0;
-  transition: all 0.3s ease;
+[data-theme="dark"] .projects-container h1 {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Немного анимации при наведении */
-.projects-container p:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
 
 .decor-images {
   position: absolute;
@@ -57,42 +46,28 @@
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Чтобы не мешали кликам */
-  z-index: 1; /* Ниже, чем текст */
-  overflow: visible; /* Чтобы картинки могли выходить за контейнер */
-  user-select: none;
-}
-
-/* Общие стили для всех декоративных картинок */
-.decor-images {
-  position: absolute; /* фиксируем абсолют */
-  top: 0;
-  left: 0;
-  width: 100%; /* чтобы занимать весь контейнер */
-  height: 100%;
   pointer-events: none;
-  z-index: 1; /* ниже текста */
+  z-index: 1;
   overflow: visible;
   user-select: none;
 }
 
-/* Индивидуальные позиции и повороты */
 .decor-img-1 {
-  top: 18%;        /* чуть ниже */
-  left: 52%;       /* сдвинута вправо */
-  transform: rotate(12deg);  /* чуть больше поворот */
+  top: 18%;
+  left: 52%;
+  transform: rotate(12deg);
 }
 
 .decor-img-2 {
-  top: 8%;         /* чуть выше */
-  right: 18%;      /* чуть дальше от правого края */
-  transform: rotate(-20deg); /* больше поворот */
+  top: 8%;
+  right: 18%;
+  transform: rotate(-20deg);
 }
 
 .decor-img-3 {
-  bottom: 38%;     /* чуть выше */
-  left: 32%;       /* сдвинута вправо */
-  transform: rotate(8deg);   /* чуть меньше поворот */
+  bottom: 38%;
+  left: 32%;
+  transform: rotate(8deg);
 }
 
 .decor-img-4 {
@@ -101,7 +76,6 @@
   transform: rotate(-7deg);
 }
 
-/* Анимация лёгкого "плавания" вверх-вниз с поворотом */
 @keyframes float {
   0%, 100% {
     transform: translateY(0) rotate(0deg);
@@ -111,54 +85,118 @@
   }
 }
 .projects-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   width: 100%;
-  max-width: 900px;
-  max-height: calc(100vh - 350px); /* высота экрана минус верхний padding и футер */
-  overflow-y: auto;
-  padding-right: 10px; /* чтобы не слипался с полосой прокрутки */
+  max-width: 1100px;
+  padding: 20px;
+  padding-bottom: 100px;
   box-sizing: border-box;
   margin-top: 40px;
 }
 
 .project-item {
   display: flex;
-  gap: 25px;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 24px var(--shadow-color);
+  border: 2px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .project-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-item:hover .project-image {
+  transform: scale(1.05);
 }
 
 .project-image {
-  width: 150px;
-  height: auto;
-  border-radius: 12px;
+  width: 100%;
+  height: 180px;
   object-fit: cover;
-  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
 .project-info {
-  flex-grow: 1;
-  color: #a16480;
+  padding: 20px;
+  color: var(--text-accent);
   font-family: 'Cascadia Mono', monospace;
-  text-align: left;
+  text-align: center;
 }
 
 .project-info h3 {
-  margin: 0 0 8px;
-  font-size: 22px;
+  margin: 0 0 10px;
+  font-size: 20px;
   font-weight: 700;
+  color: var(--text-accent);
 }
 
 .project-info p {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.project-tech {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-accent);
+  opacity: 0.8;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.decor-top-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 450px;
+  max-width: 50%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.decor-top-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 450px;
+  max-width: 50%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+  transform: scaleX(-1);
+}
+
+[data-theme="dark"] .decor-top-right,
+[data-theme="dark"] .decor-top-left {
+  opacity: 0.3;
+  filter: brightness(0) invert(1);
+}
+
+.footer-spacer {
+  height: 200px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
 }

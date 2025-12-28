@@ -1,17 +1,21 @@
 import React from 'react';
 import './About.css';
+import decorLeft from '../images/little_bacg3.png';
+import decorRight from '../images/little_bacg4.png';
 
 function About() {
   return (
     <div className="about-container">
+      <img src={decorLeft} alt="" className="about-decor-left" />
+      <img src={decorRight} alt="" className="about-decor-right" />
       <div className="circles-wrapper">
         <div className="outer-tech">
           {[
-            'Kibana', 'Grafana', 'Git', 'Gitlab', 'SQL', 'Postman', 'API',
+            'Kibana', 'Grafana', 'Git', 'Gitlab', 'SQL', 'Postman',
             'CI/CD', 'PostgreSQL', 'TestRail', 'Jira', 'Bamboo', 'Jenkins',
-            'ClickHouse', 'TestDesign', 'MySQL'
+            'ClickHouse', 'MySQL', 'Playwright'
           ].map((tech, index, array) => {
-            const angle = (index / array.length) * 2 * Math.PI;
+            const angle = (index / array.length) * 2 * Math.PI - Math.PI / 2;
             const radius = 250;
             const x = 250 + radius * Math.cos(angle);
             const y = 250 + radius * Math.sin(angle);
@@ -37,7 +41,7 @@ function About() {
             'React', 'JavaScript', 'TypeScript', 'Node.js', 'MongoDB',
             'Prisma', 'Express', 'CSS', 'HTML5'
           ].map((tech, index, array) => {
-            const angle = (index / array.length) * 2 * Math.PI;
+            const angle = (index / array.length) * 2 * Math.PI - Math.PI / 2;
             const radius = 150;
             const x = 150 + radius * Math.cos(angle);
             const y = 150 + radius * Math.sin(angle);
@@ -62,20 +66,15 @@ function About() {
   <h1>So, who am I?</h1>
   <div className="about-text-box">
     <p>
-      I’m originally from Russia, but in 2023, due to the political situation, I made the difficult decision
-      to leave my country and start a new chapter in Germany. It was one of the biggest changes in my life,
-      but also one of the most rewarding.
+      I'm an <strong>Automation QA Engineer</strong> with 5+ years of experience ensuring software quality
+      through manual and automated testing.
       <br /><br />
-      For the past five years, I worked as a QA Engineer, and this role taught me how to stay curious, detail-oriented,
-      and always open to learning. In May 2025, I completed a web development course and discovered a whole new passion.
-      Now I’m excited to combine my QA background with my fresh development skills and bring a well-rounded perspective
-      to building and testing software.
+      Currently based in Berlin, I specialize in test automation with Playwright (TypeScript/JavaScript),
+      CI/CD pipelines, and quality assurance processes. Having completed a full-stack web development bootcamp,
+      I bring a developer's perspective to testing.
       <br /><br />
-      My focus in web development is on JavaScript, TypeScript, React, and Node.js.
-      <br /><br />
-      Apart from tech, I’m a big animal lover with three cats who rule the house. In my free time, you’ll find me cycling,
-      cooking plant-based meals, designing websites, or getting lost in a good detective novel.
-      Music is always around me.
+      Outside of work, you'll find me cycling, cooking plant-based meals, or lost in a detective novel
+      — always with music and my cat nearby.
     </p>
   </div>
 </div>

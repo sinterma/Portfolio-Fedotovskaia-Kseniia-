@@ -15,23 +15,12 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 50px; /* Добавлен отступ между кругами и текстом */
+  gap: 50px;
   color: white;
   border-radius: 30px;
   overflow: hidden;
 }
 
-.about-container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('../images/background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 30px;
-  z-index: 0;
-}
 
 .about-content {
   padding: 50px;
@@ -45,30 +34,42 @@ body, html {
 .about-content h1 {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
-  color:  #a16480; /* цвет текста по умолчанию */
+  color: var(--text-accent);
   letter-spacing: 2px;
-  margin-top: 60px;  /* отступ сверху, чтобы опустить */
+  margin-top: 60px;
   margin-bottom: 20px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  padding: 10px 25px;
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  background-color: var(--bg-secondary);
+  display: inline-block;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+[data-theme="dark"] .about-content h1 {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .about-content p {
   font-family: 'Cascadia Mono', monospace;
   font-size: 16px;
   line-height: 1.3;
-  color: #322e36;
+  color: var(--text-primary);
   margin-bottom: 5px;
   margin-top: 5px;
   max-width: 700px;
-  background-color: transparent; /* убран фон */
+  background-color: transparent;
   padding: 5px;
-  border-radius: 20px; /* если хочешь, можно убрать */
-  backdrop-filter: none; /* убрать размытие */
-  box-shadow: none; /* убрать тени */
+  border-radius: 20px;
+  backdrop-filter: none;
+  box-shadow: none;
   text-indent: 20px;
   text-align: left;
   margin-top: 15px;
-  text-shadow: none; /* убрать тень */
+  text-shadow: none;
 }
 
 .about-content p br {
@@ -78,12 +79,12 @@ body, html {
   max-width: 800px;
   margin-top: 15px;
   padding: 3px 5px;
-  border: 2px solid rgba(255, 255, 255, 0.5); /* прозрачная рамка */
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* легкая прозрачность фона */
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.05);
-  color: #322e36;
+  color: var(--text-primary);
   font-family: 'Cascadia Mono', monospace;
   font-size: 16px;
   line-height: 1.4;
@@ -91,15 +92,13 @@ body, html {
   text-align: left;
   user-select: text;
   z-index: 3;
-  margin-left: 50px; 
+  margin-left: 50px;
 }
 
-/* Обертка для кругов */
 .circles-wrapper {
   position: relative;
-  width: 400px;  /* ширина блока с кругами */
+  width: 400px;
   height: 400px;
-  /* margin-right: auto; - убираем, чтобы не мешал flex */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,7 +107,6 @@ body, html {
    transform: translateX(-70px);
 }
 
-/* Стили для внешнего круга */
 .outer-tech {
   position: absolute;
   top: 50%;
@@ -122,27 +120,27 @@ body, html {
 .outer-tech span {
   position: absolute;
   transform: translate(-50%, -50%);
-  background-color: #cb95cf;
+  background-color: var(--circle-outer);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 14px;
 }
 .outer-tech span:hover{
-  background-color: #cb95cf; /* или другой цвет свечения */
-  box-shadow: 0 0 10px 3px #cb95cf;
-  color: white; /* чтобы текст лучше читался */
-  cursor: pointer; /* курсор меняется на руку */
-  transition: all 0.3s ease; /* плавное появление эффекта */
+  background-color: var(--circle-outer);
+  box-shadow: 0 0 10px 3px var(--circle-outer);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .floating-tech span:hover  {
- background-color: #5cacd1; /* или другой цвет свечения */
-  box-shadow: 0 0 10px 3px #6ec2e9;
-  color: white; /* чтобы текст лучше читался */
-  cursor: pointer; /* курсор меняется на руку */
-  transition: all 0.3s ease; /* плавное появление эффекта */
+ background-color: var(--circle-inner);
+  box-shadow: 0 0 10px 3px var(--circle-inner);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-/* Стили для внутреннего круга */
+
 .floating-tech {
   position: absolute;
   top: 50%;
@@ -156,17 +154,17 @@ body, html {
 .floating-tech span {
   position: absolute;
   transform: translate(-50%, -50%);
-  background-color: #65afd1;
+  background-color: var(--circle-inner);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 14px;
 }
 .floating-tech-center-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(calc(-50% + 30px), calc(-50% + 30px));
-  color:  #ffffff;
+  top: 150px;
+  left: 150px;
+  transform: translate(-50%, -50%);
+  color: var(--text-accent);
   font-family: 'Playfair Display', serif;
   font-size: 24px;
   font-weight: 600;
@@ -174,9 +172,42 @@ body, html {
   user-select: none;
   z-index: 3;
   text-align: center;
-  width: 140px; /* ширина рамки */
+  width: 140px;
   padding: 10px 15px;
-  border: 2px solid rgba(255, 255, 255, 0.5); /* прозрачная рамка */
+  border: 2px solid var(--border-color);
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.1); /* легкая прозрачность фона */
-  backdrop-filter: blur(5px); }
+  background-color: var(--bg-secondary);
+  backdrop-filter: blur(5px);
+}
+
+[data-theme="dark"] .floating-tech-center-text {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.about-decor-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  max-width: 45%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.about-decor-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  max-width: 45%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+[data-theme="dark"] .about-decor-left,
+[data-theme="dark"] .about-decor-right {
+  display: none;
+}

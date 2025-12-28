@@ -4,29 +4,29 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    flex-direction: column; /* добавили вертикальное выравнивание */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 16px 30px;
-    background: #fef7fa;
+    background: var(--bg-secondary);
     border-radius: 20px;
     font-family: 'Cascadia Mono', monospace;
     text-align: center;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 -2px 10px var(--shadow-color);
     width: 75%;
     max-width: 1000px;
-    border-top: 4px solid #181717;
-    border-bottom: 4px solid #181717;
+    border-top: 4px solid var(--border-color);
+    border-bottom: 4px solid var(--border-color);
     z-index: 50;
 }
 
 .footer-title {
     font-size: 16px;
     font-weight: bold;
-    color: #322e36;
+    color: var(--text-primary);
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.25);
     cursor: default;
-    margin-bottom: 10px; /* отступ от заголовка до ссылок */
+    margin-bottom: 10px;
 }
 
 .footer-links {
@@ -35,11 +35,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px; /* отступ перед текстом внизу */
+    margin-bottom: 10px;
 }
 
 .footer-links a {
-    color: #322e36;
+    color: var(--text-primary);
     text-decoration: none;
     transition: color 0.3s ease;
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.25);
@@ -49,20 +49,20 @@
 }
 
 .footer-links a:hover {
-    color:  #a16480;
+    color: var(--text-accent);
     text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
 .footer-links img {
     width: 24px;
     height: 24px;
-    transition: transform 0.3s ease, filter 0.3s ease; /* добавляем плавное изменение позиции */
+    transition: transform 0.3s ease, filter 0.3s ease;
     pointer-events: auto;
 }
 
 .footer-links img:hover {
-    transform: translateY(-5px); /* приподнимаем иконку */
-    filter: brightness(1.2); /* добавляем эффект яркости */
+    transform: translateY(-5px);
+    filter: brightness(1.2);
 }
 
 .footer-links img:focus,
@@ -73,7 +73,7 @@
 
 .footer-bottom {
     font-size: 12px;
-    color:  #a16480;
+    color: var(--text-accent);
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
     margin-top: 0;
     margin-left: 10px;
@@ -81,14 +81,26 @@
     text-align: center;
 }
 
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.contact-item .label {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
 .contact-me {
     margin-bottom: 5px;
     font-size: 16px;
     font-weight: bold;
-    color: #322e36;
+    color: var(--text-primary);
     cursor: pointer;
 }
 
 .contact-me:hover {
-    color: #f4c2d5;
+    color: var(--text-accent-hover);
 }

@@ -1,15 +1,50 @@
 .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 120px 20px 50px; /* добавил отступ сверху — 120px */
-    text-align: center;
-    font-family: 'Cascadia Mono', monospace;
-    color:  #a16480;
-    min-height: calc(100vh - 120px); /* чтобы контейнер занимал высоту экрана минус navbar */
-    box-sizing: border-box;
-  }
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 50px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  text-align: center;
+  font-family: 'Cascadia Mono', monospace;
+  color: var(--text-accent);
+}
+
+.blumen-img {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  max-width: 100%;
+  z-index: 0;
+}
+
+.tree-img {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 600px;
+  max-width: 100%;
+  z-index: 10;
+}
+
+.home-decor-images {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.text-wrapper {
+  max-width: 800px;
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
 
 .home-container h1 {
   font-size: 48px;
@@ -26,8 +61,8 @@
 }
 
 .home-container button {
-  background-color:  #a16480;
-  color: #322e36;
+  background-color: var(--text-accent);
+  color: var(--text-primary);
   border: none;
   padding: 12px 25px;
   border-radius: 12px;
@@ -35,17 +70,18 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px var(--shadow-color);
   font-family: 'Cascadia Mono', monospace;
 }
 
 .home-container button:hover {
-  background-color: #db94b4;
+  background-color: var(--text-accent-hover);
   color: #fff;
   transform: translateY(-2px);
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
+
 .tech-circle {
   position: relative;
   width: 300px;
@@ -61,6 +97,6 @@
   top: 50%;
   transform-origin: 0 -130px;
   font-size: 18px;
-  color: #db94b4;
+  color: var(--text-accent-hover);
   animation: spin 20s linear infinite;
 }
