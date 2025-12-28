@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
-import blumen from '../images/blumen.png';
+import blumen from '../images/Blumen.png';
 import tree from '../images/tree.png';
 
 function Home() {
